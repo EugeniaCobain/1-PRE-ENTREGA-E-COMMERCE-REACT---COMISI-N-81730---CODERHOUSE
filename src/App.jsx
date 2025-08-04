@@ -18,7 +18,7 @@ function App() {
               capturing the resting places of great thinkers, scientists, and
               artists. 
             </p>
-            <p>Browse our catalog and find the perfect piece to add to your collection!</p>
+            <p>Browse our catalog and find the perfect piece to add to your collection!!!!</p>
           </>
         }
       />
