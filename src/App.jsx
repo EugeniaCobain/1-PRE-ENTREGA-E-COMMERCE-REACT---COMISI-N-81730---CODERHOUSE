@@ -1,29 +1,22 @@
-import ItemListContainer from "./components/Itemlistcontainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Graves from "./pages/Graves";
+import Details from "./pages/Details";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
-function App() {
+export default function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <ItemListContainer
-        greeting={
-          <>
-            <p>
-              Welcome to our website, where reverence meets inspiration, and the
-              past echoes through the hallowed grounds of those who shaped the
-              course of history.
-            </p>
-            <p>
-              Explore our exclusive gallery of high-quality photographs
-              capturing the resting places of great thinkers, scientists, and
-              artists. 
-            </p>
-            <p>Browse our catalog and find the perfect piece to add to your collection!!!!</p>
-          </>
-        }
-      />
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/graves" element={<Graves />} />
+        <Route path="/detail/:id" element={<Details />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;

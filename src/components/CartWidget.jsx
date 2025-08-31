@@ -1,3 +1,4 @@
+/* COMPONENTE PARA CARRITO DE COMPRAS PRENDIENTE PARA ENTREGA FINAL */
 const CartWidget = () => {
   const productCount = 0; 
   return (

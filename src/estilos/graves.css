@@ -1,0 +1,82 @@
+/* PÁGINA GRAVES */
+.graves-page{
+    background-color: #2b4542;
+}
+.grave-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-auto-rows: minmax(700px, auto);
+  gap: 60px;
+  padding-top: 0px;
+}
+/* BOTONES SECCIÓN GRAVES */
+.btn-graves{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4.6875rem;
+  gap: 1.25rem;
+  background-color: #2b4542;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+.btn-section{
+  background-color: #203536;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 0.625rem;
+  width: 18.75rem;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  filter: drop-shadow(0px 4px 6px #203536);
+  transition: all 0.3s;
+}
+.btn-section:hover{
+  border: solid 2px #baa480
+}
+.btn-section a{
+  font-family: Oxygen-Regular !important;
+  color: #baa480;
+  font-size: 2rem;
+  font-weight: bold; 
+}
+.btn-section a:hover{
+  color: #928d7f;
+}
+/* SECCIONES DE LA PÁGINA GRAVES*/
+.section{
+  width: 100%;
+  text-align: center;
+  padding: 25px 25px;
+}
+.section__title{
+  font-size: 1.3rem;
+  font-size: 3rem;
+  color: #baa480;
+  padding: 50px;
+}
+
+/* RESPONSIVIDAD */
+/* PANTALLAS DE 768PX PARA ABAJO */
+@media (max-width: 768px) {
+  /* Botones de la página graves */
+  .btn-graves{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3.125rem;
+    gap: 1.25rem;
+}
+}
+
+/* PANTALLAS DE 360PX PARA ABAJO */
+@media (max-width: 360px) {
+  /* Botones de la página graves */
+  .btn-graves{
+    margin: 10px;
+    gap: 1.25rem;
+}
+}
+

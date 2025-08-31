@@ -1,0 +1,16 @@
+/* BANNERS */
+.banner{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #baa480;
+  text-align: center;
+  height: 43.75rem;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 3rem;
+  font-weight: bolder;
+  text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
+}
+

@@ -1,0 +1,11 @@
+Profe,
+
+Como el tema de mi sitio no tiene una API que me sirva -al menos que yo sepa- y, además, lo que "vende" este sitio son fotos que saqué yo, me creé y simulé mi propia API "personajes.JSON".
+
+Tuve problemas para navegar a las secciones a la página "Graves" desde otras páginas. No se dirigía a la sección correspondiente, sino recién al segundo intento. Probé mil cosas y no pude resolverlo sola. Incluso le pregunté a ChatGPT, que me daba soluciones que no funcionaban o me rompían todo, hasta que, después de una larga lucha, me dio una que anda, pero es muy complicada, por eso lo llené de comentarios que no borré para la entrega porque me sirven para entender ese código que a mí no se me hubiera ocurrido nunca. Salvo eso, la navegación entre las páginas -incluso dentro de la misma "Graves" a sus secciones-, sin inconvenientes.
+
+Dejé armadas o presentadas ya para la entrega final algunas páginas y botones, pero sin contenido o funcionalidad. Por ejemplo, el botón para el logIn para ya tenerlo incorprado en el navbar y no tener que tocar estilos ni nada después. 
+
+¡Muchas gracias!
+
+

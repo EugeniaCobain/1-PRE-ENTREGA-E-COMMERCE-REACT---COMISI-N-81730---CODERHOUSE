@@ -1,0 +1,106 @@
+/* CARDS */
+.grave-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  grid-auto-rows: auto; 
+}
+.card-container, .detail-card {
+  border-radius: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+}
+.card {
+  width: 100%;
+  height:100%;
+  border-radius: 0.9375rem;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border: solid 3px #baa480;        
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+  position: relative;        
+}
+.card:hover {
+  transform: translateY(-3px);
+}
+.face {
+  width: 100%;
+  height: 100%;
+}
+.card .front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .front h3{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  color: #baa480;      
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: #2b4542;
+  padding: 10px;
+}
+/* Botones de las cards */
+.button-buy-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  gap: 1rem;
+}
+.buy-button {
+  background-color: #2b4542;
+  color: #baa480;
+  border: solid 1px #baa480 ;
+  padding: 8px 16px;
+  border-radius: 0.625rem;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* RESPONSIVIDAD */
+/* PANTALLAS DE 360PX PARA ABAJO */
+@media (max-width: 520px) {
+  /* Contenedor de las cards */
+  .grave-container {
+    display: grid !important;              
+    grid-template-columns: 1fr !important;   
+    gap: 0px;
+    padding: 0;
+    grid-auto-rows: auto;
+    grid-auto-rows: auto !important;   
+    padding: 12px 0;
+  }
+  /* Mantener tamaño de las cards, a pesar de los distintos tamaños de las fotos */
+  .card { 
+    height: auto; 
+  }
+  /* 2) La "cara" frontal define un ALTO CONSISTENTE para todas */
+  .card .front {
+    position: relative;
+    aspect-ratio: 4 / 5;  
+    overflow: hidden;
+  }
+  /* 2.b) Pisar la regla global: .face { height:100% } */
+  .face { height: auto; }  /* ← importante para que el aspect-ratio funcione */
+  /* 3) La imagen rellena el marco y se recorta sin deformar */
+  .card .front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  /* 4) El título overlay sigue funcionando */
+  .card .front h3 {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 45px;          /* o reduce a 40px si querés más foto */
+  }
+  /* Botón sin romper layout */
+  .button-buy-container { flex-wrap: wrap; }
+  .buy-button { max-width: 100%; }
+}
